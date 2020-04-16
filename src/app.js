@@ -1,1 +1,2 @@
-console.log('app.js is running!');
+import React from 'react';
+import ReactDom from 'react-dom';

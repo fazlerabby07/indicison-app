@@ -16,9 +16,14 @@
         "@babel/core": "^7.9.0",
         "@babel/preset-env": "^7.9.5",
         "@babel/preset-react": "^7.9.4",
+        "babel-loader": "^8.1.0",
         "live-server": "^1.2.1",
         "webpack": "^4.42.1",
         "webpack-cli": "^3.3.11"
     },
-    "dependencies": {}
+    "dependencies": {
+        "react": "^16.13.1",
+        "react-dom": "^16.13.1",
+        "validator": "^13.0.0"
+    }
 }
