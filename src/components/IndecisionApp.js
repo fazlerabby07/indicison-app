@@ -5,17 +5,9 @@ import Header from './Header';
 import Action from './Action';
 
 class IndecisionApp extends React.Component {
-    constructor(props) {
-        super(props);
-        this.handlePick = this.handlePick.bind(this);
-        this.handelDeleteOptions = this.handelDeleteOptions.bind(this);
-        this.handelDeleteOption = this.handelDeleteOption.bind(this);
-        this.handleAddOption = this.handleAddOption.bind(this);
-        this.state = {
-            options: [],
-        };
-    }
-
+    state = {
+        options: [],
+    };
     componentDidMount() {
         try {
             const json = localStorage.getItem('options');
@@ -36,23 +28,23 @@ class IndecisionApp extends React.Component {
     componentWillUnmount() {
         console.log('component did unmonunt');
     }
-    handlePick() {
+    handlePick = () => {
         const randomNum = Math.floor(Math.random() * this.state.options.length);
         const option = this.state.options[randomNum];
         alert(option);
-    }
+    };
 
-    handelDeleteOptions() {
+    handelDeleteOptions = () => {
         this.setState(() => ({ options: [] }));
-    }
-    handelDeleteOption(optionToRemove) {
+    };
+    handelDeleteOption = (optionToRemove) => {
         this.setState((prevState) => ({
             options: prevState.options.filter(
                 (option) => optionToRemove !== option
             ),
         }));
-    }
-    handleAddOption(option) {
+    };
+    handleAddOption = (option) => {
         if (!option) {
             return 'Enter Valid to add item';
         } else if (this.state.options.indexOf(option) > -1) {
@@ -61,7 +53,7 @@ class IndecisionApp extends React.Component {
         this.setState((prevState) => ({
             options: prevState.options.concat(option),
         }));
-    }
+    };
 
     render() {
         const subTitle = 'Put your life in the hand of a computer';

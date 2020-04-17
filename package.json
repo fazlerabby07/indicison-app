@@ -6,8 +6,8 @@
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "serve": "live-server public/",
-        "build": "webpack --watch",
-        "build-babel": "babel src/app.js --out-file=public/scripts/app.js --presets=@babel/preset-env,@babel/preset-react --watch"
+        "build": "webpack",
+        "dev-server": "webpack-dev-server"
     },
     "author": "",
     "license": "ISC",
@@ -17,9 +17,11 @@
         "@babel/preset-env": "^7.9.5",
         "@babel/preset-react": "^7.9.4",
         "babel-loader": "^8.1.0",
+        "babel-plugin-transform-class-properties": "^6.24.1",
         "live-server": "^1.2.1",
         "webpack": "^4.42.1",
-        "webpack-cli": "^3.3.11"
+        "webpack-cli": "^3.3.11",
+        "webpack-dev-server": "^3.10.3"
     },
     "dependencies": {
         "react": "^16.13.1",
